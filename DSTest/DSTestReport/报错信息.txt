@@ -1,0 +1,114 @@
+
+--------------------------------------------报错1：---------------------
+查询商家待报价详情：
+
+Thread Name:报价商-登录/报价 2-1
+Sample Start:2020-09-17 03:10:09 CST
+Load time:105
+Connect Time:0
+Latency:105
+Size in bytes:7836
+Sent bytes:667
+Headers size in bytes:0
+Body size in bytes:7836
+Sample Count:1
+Error Count:1
+Data type ("text"|"bin"|""):text
+Response code:200
+Response message:
+
+
+HTTPSampleResult fields:
+ContentType: 
+DataEncoding: null
+
+请求：
+POST http://demo.api.btobchat.com:8080/jiaparts-support-api/oc-jsj/spts007
+
+POST data:
+{"channel":"PC","clientType":"PC","spCode":"SYJ_C01","accessToken":"XQZ1M8103WLZFP6XZ5XVTF94Q","userbuid":"1000108013","organName":"险企专用供应商全称0914005","userId":"102986","organId":"267906","param":{"inqUniqSN":"XJ2009178603194701487834"}}
+
+
+应答：
+{"retCode":"SYS-104","retMsg":"????","errMsg":"org.springframework.jdbc.UncategorizedSQLException: \n### Error querying database.  Cause: java.sql.SQLException: Logical handle no longer valid\n### The error may exist in com/jiaparts/oc/mapper/InqExtMapper.java (best guess)\n### The error may involve com.jiaparts.oc.mapper.InqExtMapper.getInqExt\n### The error occurred while executing a query\n### Cause: java.sql.SQLException: Logical handle no longer valid\n; uncategorized SQLException; SQL state [null]; error code [0]; Logical handle no longer valid; nested exception is java.sql.SQLException: Logical handle no longer valid\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)\n\tat org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)\n\tat org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)\n\tat com.sun.proxy.$Proxy81.selectOne(Unknown Source)\n\tat org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166)\n\tat org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:83)\n\tat org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)\n\tat com.sun.proxy.$Proxy105.getInqExt(Unknown Source)\n\tat com.jiaparts.oc.mgr.TransMgr.getInqRecvDetail(TransMgr.java:259)\n\tat com.jiaparts.oc.service.trade.impl.SellPlatformTradeServiceImpl.lambda$spts007$10(SellPlatformTradeServiceImpl.java:327)\n\tat com.jiaparts.oc.service.OcBaseService.withResult(OcBaseService.java:176)\n\tat com.jiaparts.oc.service.trade.impl.SellPlatformTradeServiceImpl.spts007(SellPlatformTradeServiceImpl.java:323)\n\tat sun.reflect.GeneratedMethodAccessor682.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat com.jiaparts.framework.dubbo.DubboServiceImpl.invokeMethod(DubboServiceImpl.java:100)\n\tat com.jiaparts.framework.dubbo.DubboServiceImpl.doPost(DubboServiceImpl.java:68)\n\tat com.alibaba.dubbo.common.bytecode.Wrapper3.invokeMethod(Wrapper3.java)\n\tat com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)\n\tat com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)\n\tat com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)\n\tat com.jiaparts.framework.dubbo.filter.CoreLogsFilter.invoke(CoreLogsFilter.java:42)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.jiaparts.framework.dubbo.filter.AccessTokenFilter.invoke(AccessTokenFilter.java:66)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.ExecuteLimitFilter.invoke(ExecuteLimitFilter.java:50)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:70)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:132)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:113)\n\tat com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)\n\tat com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)\n\tat com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)\n\tat com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\nCaused by: java.sql.SQLException: Logical handle no longer valid\n\tat com.mysql.jdbc.SQLError.createSQLException(SQLError.java:869)\n\tat com.mysql.jdbc.SQLError.createSQLException(SQLError.java:865)\n\tat com.mysql.jdbc.jdbc2.optional.ConnectionWrapper.checkClosed(ConnectionWrapper.java:783)\n\tat com.mysql.jdbc.jdbc2.optional.ConnectionWrapper.getAutoCommit(ConnectionWrapper.java:141)\n\tat sun.reflect.GeneratedMethodAccessor155.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat com.atomikos.jdbc.AtomikosConnectionProxy.invoke(AtomikosConnectionProxy.java:141)\n\tat com.sun.proxy.$Proxy150.getAutoCommit(Unknown Source)\n\tat org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:83)\n\tat org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68)\n\tat org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:338)\n\tat org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84)\n\tat org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)\n\tat org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)\n\tat org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)\n\tat org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)\n\tat com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:108)\n\tat org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)\n\tat com.sun.proxy.$Proxy148.query(Unknown Source)\n\tat org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)\n\tat org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)\n\tat org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:77)\n\tat sun.reflect.GeneratedMethodAccessor162.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)\n\t... 48 more\n","reqSeq":"1600283416","result":null}
+
+
+
+------------------------------------------报错2-------------
+查询待结案：
+Thread Name:定损员-登录/询价/提议/结案 1-14
+Sample Start:2020-09-17 03:41:40 CST
+Load time:37
+Connect Time:0
+Latency:37
+Size in bytes:138
+Sent bytes:639
+Headers size in bytes:0
+Body size in bytes:138
+Sample Count:1
+Error Count:1
+Data type ("text"|"bin"|""):text
+Response code:502
+Response message:Bad Gateway
+
+
+HTTPSampleResult fields:
+ContentType: 
+DataEncoding: null
+
+
+请求：
+POST http://demo.api.btobchat.com:8080/jiaparts-support-api/oc-jsj/iepdl007
+
+POST data:
+{"grpId":"0","accessToken":"JFSKNZDTJZ4L5YHNUK4T750VJ","channel":"MOBILE","commit":true,"userId":"103030","organId":"267901","reqSeq":1599818795208,"pageno":"1","pagesize":"20","param":{"keyword":"","pageno":1,"pagesize":20}}
+
+
+应答：<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>
+
+-----------------------------------------报错3：----------
+
+{"retCode":"SYS-104","retMsg":"????","errMsg":"java.lang.IllegalStateException: Max number of active transactions reached:50\n\tat com.atomikos.icatch.imp.TransactionServiceImp.createCompositeTransaction(TransactionServiceImp.java:773)\n\tat com.atomikos.icatch.imp.CompositeTransactionManagerImp.createCompositeTransaction(CompositeTransactionManagerImp.java:393)\n\tat com.atomikos.icatch.jta.TransactionManagerImp.begin(TransactionManagerImp.java:271)\n\tat com.atomikos.icatch.jta.TransactionManagerImp.begin(TransactionManagerImp.java:249)\n\tat com.atomikos.icatch.jta.UserTransactionManager.begin(UserTransactionManager.java:132)\n\tat org.springframework.transaction.jta.JtaTransactionManager.doJtaBegin(JtaTransactionManager.java:885)\n\tat org.springframework.transaction.jta.JtaTransactionManager.doBegin(JtaTransactionManager.java:848)\n\tat org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:378)\n\tat com.jiaparts.framework.service.BaseService.txBegin(BaseService.java:101)\n\tat com.jiaparts.oc.service.iep.impl.IepDlServiceImpl.iepdl001(IepDlServiceImpl.java:153)\n\tat sun.reflect.GeneratedMethodAccessor569.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat com.jiaparts.framework.dubbo.DubboServiceImpl.invokeMethod(DubboServiceImpl.java:100)\n\tat com.jiaparts.framework.dubbo.DubboServiceImpl.doPost(DubboServiceImpl.java:68)\n\tat com.alibaba.dubbo.common.bytecode.Wrapper3.invokeMethod(Wrapper3.java)\n\tat com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)\n\tat com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)\n\tat com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)\n\tat com.jiaparts.framework.dubbo.filter.CoreLogsFilter.invoke(CoreLogsFilter.java:42)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.jiaparts.framework.dubbo.filter.AccessTokenFilter.invoke(AccessTokenFilter.java:66)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.ExecuteLimitFilter.invoke(ExecuteLimitFilter.java:50)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:70)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:132)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:113)\n\tat com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)\n\tat com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)\n\tat com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)\n\tat com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\n","reqSeq":"1599112828473","result":null}
+
+
+-------------------------------------------报错4：-----------------------
+org.apache.http.conn.ConnectTimeoutException: Connect to demo.api.btobchat.com:8080 [demo.api.btobchat.com/122.112.138.116] failed: connect timed out
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:401)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:930)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:641)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1281)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1270)
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:630)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:558)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 19 more
+
+

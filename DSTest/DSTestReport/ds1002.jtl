@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="176" it="0" lt="167" ct="39" ts="1600222033595" s="true" lb="险企管理员登录" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="1656" sby="466" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Vary: Accept-Encoding
+Date: Wed, 16 Sep 2020 02:04:33 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Length: 260
+Content-Type: text/plain
+Host: 172.24.11.31:8080
+User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_65)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;retCode&quot;:&quot;200&quot;,&quot;retMsg&quot;:&quot;处理成功&quot;,&quot;errMsg&quot;:null,&quot;reqSeq&quot;:&quot;S1599535741&quot;,&quot;result&quot;:{&quot;user&quot;:{&quot;id&quot;:46909,&quot;userName&quot;:&quot;&quot;,&quot;passWord&quot;:&quot;96e79218965eb72c92a549dd5a330112&quot;,&quot;bindPhone&quot;:&quot;17620000901&quot;,&quot;organId&quot;:209716,&quot;avatar&quot;:&quot;&quot;,&quot;nickName&quot;:&quot;七六二九零一&quot;,&quot;isMain&quot;:1,&quot;status&quot;:0,&quot;staffName&quot;:&quot;七六二九零一&quot;,&quot;telephone&quot;:&quot;17620000901&quot;,&quot;buId&quot;:&quot;3000371768&quot;,&quot;pinYin&quot;:&quot;QLEJLY&quot;,&quot;createTime&quot;:1590110223000,&quot;updateTime&quot;:1590110223000,&quot;loginTime&quot;:1600221599000},&quot;organ&quot;:{&quot;id&quot;:209716,&quot;organName&quot;:&quot;一七六二九零一测试保险企业&quot;,&quot;organAbbr&quot;:&quot;六二九零一险&quot;,&quot;bossName&quot;:&quot;七六二九零一&quot;,&quot;bossCellphone&quot;:&quot;17620000901&quot;,&quot;telephone&quot;:&quot;17620000901&quot;,&quot;linkman&quot;:&quot;&quot;,&quot;mmbNo&quot;:&quot;MB00066310&quot;,&quot;province&quot;:140000,&quot;city&quot;:140400,&quot;district&quot;:140405,&quot;address&quot;:&quot;&quot;,&quot;status&quot;:0,&quot;createUserId&quot;:46909,&quot;createTime&quot;:1590110223000,&quot;updateUserId&quot;:46909,&quot;updateTime&quot;:1590116452000,&quot;organType&quot;:19,&quot;pinYin&quot;:&quot;YQLEJLYCSBXQY&quot;,&quot;isTest&quot;:0,&quot;indId&quot;:1,&quot;logoPath&quot;:&quot;&quot;,&quot;isPerfect&quot;:1,&quot;statusTime&quot;:null,&quot;provinceName&quot;:&quot;山西&quot;,&quot;cityName&quot;:&quot;长治市&quot;,&quot;districtName&quot;:&quot;屯留区&quot;,&quot;organTypeName&quot;:&quot;险企&quot;,&quot;indName&quot;:null,&quot;organPhotoList&quot;:null,&quot;busineScope&quot;:&quot;&quot;,&quot;creditCode&quot;:&quot;&quot;,&quot;introduction&quot;:&quot;&quot;},&quot;organEmployee&quot;:{&quot;id&quot;:47159,&quot;organId&quot;:209716,&quot;userId&quot;:46909,&quot;employeeCode&quot;:&quot;&quot;,&quot;position&quot;:&quot;7&quot;,&quot;isMain&quot;:1,&quot;status&quot;:0,&quot;createUserId&quot;:46909,&quot;createTime&quot;:1590110223000,&quot;updateUserId&quot;:46909,&quot;updateTime&quot;:1590110223000,&quot;workStatus&quot;:1},&quot;imToken&quot;:&quot;b457d1e47e62414fb250c23f9e1e156b&quot;,&quot;accessToken&quot;:&quot;B9YSZWRY59OLYJT70UQIS5JE9&quot;}}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String">{&quot;accessToken&quot;:&quot;dev&quot;,&quot;channel&quot;:&quot;PC&quot;,&quot;organId&quot;:0,&quot;param&quot;:{&quot;logInfo&quot;:{&quot;appCode&quot;:&quot;PC&quot;,&quot;appVersion&quot;:&quot;1.0.0.0&quot;,&quot;ip&quot;:&quot;169.254.145.14&quot;,&quot;oSType&quot;:&quot;windows&quot;,&quot;oSVersion&quot;:&quot;Windows 7&quot;},&quot;passWord&quot;:&quot;111111&quot;,&quot;userName&quot;:&quot;17620000901&quot;},&quot;reqSeq&quot;:&quot;S1599535741&quot;,&quot;spCode&quot;:&quot;SYJ_B01&quot;}</queryString>
+  <java.net.URL>http://172.24.11.31:8080/jiaparts-support-api/mml-syj/oumiep101</java.net.URL>
+</httpSample>
+<httpSample t="12" it="0" lt="12" ct="0" ts="1600222033871" s="false" lb="添加定损员" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="4169" sby="523" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /&quot;retCode&quot;:&quot;200&quot;/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Vary: Accept-Encoding
+Date: Wed, 16 Sep 2020 02:04:33 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Length: 305
+Content-Type: text/plain; charset=UTF-8
+Host: 172.24.11.31:8080
+User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_65)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;retCode&quot;:&quot;ORG-202&quot;,&quot;retMsg&quot;:&quot;用户已是本机构员工&quot;,&quot;errMsg&quot;:&quot;com.jiaparts.framework.utils.JpException: ORG-202:用户已是本机构员工\n\tat com.jiaparts.framework.utils.CheckUtils.throwException(CheckUtils.java:87)\n\tat com.jiaparts.framework.service.BaseService.throwException(BaseService.java:46)\n\tat com.jiaparts.mml.service.common.employee.impl.EmployeeServiceImpl.oum303(EmployeeServiceImpl.java:173)\n\tat sun.reflect.GeneratedMethodAccessor565.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:497)\n\tat com.jiaparts.framework.dubbo.DubboServiceImpl.invokeMethod(DubboServiceImpl.java:114)\n\tat com.jiaparts.framework.dubbo.DubboServiceImpl.doPost(DubboServiceImpl.java:81)\n\tat com.alibaba.dubbo.common.bytecode.Wrapper3.invokeMethod(Wrapper3.java)\n\tat com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)\n\tat com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)\n\tat com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)\n\tat com.jiaparts.framework.dubbo.filter.CoreLogsFilter.invoke(CoreLogsFilter.java:42)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.jiaparts.framework.dubbo.filter.AccessTokenFilter.invoke(AccessTokenFilter.java:66)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.ExecuteLimitFilter.invoke(ExecuteLimitFilter.java:50)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:70)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:132)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)\n\tat com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)\n\tat com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:113)\n\tat com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)\n\tat com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)\n\tat com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)\n\tat com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)\n\tat java.lang.Thread.run(Thread.java:745)\n&quot;,&quot;reqSeq&quot;:&quot;S1599623319&quot;,&quot;result&quot;:null}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String">{&quot;accessToken&quot;:&quot;B9YSZWRY59OLYJT70UQIS5JE9&quot;,&quot;channel&quot;:&quot;PC&quot;,&quot;userId&quot;:46909,&quot;organId&quot;:209716,&quot;clientType&quot;:&quot;PC&quot;,&quot;userbuid&quot;:&quot;3000371768&quot;,&quot;grpId&quot;:&quot;&quot;,&quot;spCode&quot;:&quot;SYJ_B03&quot;,&quot;spCodes&quot;:&quot;&quot;,&quot;param&quot;:{&quot;nickName&quot;:&quot;ds90109&quot;,&quot;staffName&quot;:&quot;定损90109&quot;,&quot;bindPhone&quot;:&quot;17620090109&quot;,&quot;position&quot;:&quot;15&quot;},&quot;reqSeq&quot;:&quot;S1599623319&quot;,&quot;ip&quot;:&quot;&quot;}</queryString>
+  <java.net.URL>http://172.24.11.31:8080/jiaparts-support-api/mml-syj/oum303</java.net.URL>
+</httpSample>
+
+</testResults>

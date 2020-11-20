@@ -1,0 +1,2 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,grpThreads,allThreads,Latency,IdleTime
+1600251565618,117,核价员登录,200,,【调试】核价员-登录&领任务&审核 1-1,text,false,Test failed: text expected to contain /处理成功/,1163,1,1,114,0
